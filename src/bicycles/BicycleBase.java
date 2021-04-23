@@ -4,7 +4,7 @@ public abstract class BicycleBase implements  Bicycles{
 
     private  int speed = 0;
 
-    protected void changeSpeed(int x ) {
+    public void changeSpeed(int x ) {
        speed = x;
     }
 
