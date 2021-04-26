@@ -11,6 +11,14 @@ package bicycles;
 
         public  void stop();
 
+        public default BicycleType getBicycleType(BicycleType bicycleType){
+            return bicycleType;
+        }
+
+        void accelerate();
+
+        void brake();
+
 //    private int speed = 0;
 //        public void AccelerateSpeed ()
 //        {
