@@ -1,6 +1,6 @@
 package bicycles;
 
-public class BicycleFromSpec extends  BicycleBase{
+public abstract class BicycleFromSpec extends  BicycleBase{
     public BicycleSpecification bicycleSpecification;
 
     public BicycleFromSpec (Bicycles bicycles) {

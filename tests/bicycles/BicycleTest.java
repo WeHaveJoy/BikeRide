@@ -7,14 +7,34 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BicycleTest {
     @Test
     public void shouldAccellerate() {
-        Bicycles bicycles = new RoadBike();
+        Bicycles bicycles = new RoadBike() {
+            @Override
+            public void accelerate() {
+
+            }
+
+            @Override
+            public void brake() {
+
+            }
+        };
         bicycles.AccelerateSpeed();
         assertEquals(11, bicycles.CurrentSpeed());
     }
 
     @Test
     public void shouldBrake() {
-        Bicycles bicycles = new MountainBike();
+        Bicycles bicycles = new MountainBike() {
+            @Override
+            public void accelerate() {
+
+            }
+
+            @Override
+            public void brake() {
+
+            }
+        };
         bicycles.AccelerateSpeed();
         bicycles.BrakeSpeed();
         bicycles.AccelerateSpeed();
@@ -22,7 +42,17 @@ public class BicycleTest {
     }
     @Test
     public void shouldShowCurrentSpeed() {
-        Bicycles bicycles = new RoadBike();
+        Bicycles bicycles = new RoadBike() {
+            @Override
+            public void accelerate() {
+
+            }
+
+            @Override
+            public void brake() {
+
+            }
+        };
         bicycles.AccelerateSpeed();
         bicycles.BrakeSpeed();
         bicycles.CurrentSpeed();
@@ -31,7 +61,17 @@ public class BicycleTest {
     @Test
     public void shouldDoMultipleAcceleratesCorrectly() {
 
-        Bicycles bicycles = new RoadBike();
+        Bicycles bicycles = new RoadBike() {
+            @Override
+            public void accelerate() {
+
+            }
+
+            @Override
+            public void brake() {
+
+            }
+        };
         bicycles.AccelerateSpeed();
         bicycles.AccelerateSpeed();
         assertEquals(11, bicycles.CurrentSpeed());
@@ -40,7 +80,17 @@ public class BicycleTest {
     @Test
     public void shouldDoMultipleAccelerateAndBrakesCorrectly() {
 
-        Bicycles bicycles = new MountainBike();
+        Bicycles bicycles = new MountainBike() {
+            @Override
+            public void accelerate() {
+
+            }
+
+            @Override
+            public void brake() {
+
+            }
+        };
         bicycles.AccelerateSpeed();
         bicycles.BrakeSpeed();
         bicycles.AccelerateSpeed();
@@ -53,7 +103,17 @@ public class BicycleTest {
     @Test
     public void shouldBeAbleToStop() {
 
-        Bicycles bicycles = new RoadBike();
+        Bicycles bicycles = new RoadBike() {
+            @Override
+            public void accelerate() {
+
+            }
+
+            @Override
+            public void brake() {
+
+            }
+        };
         bicycles.AccelerateSpeed();
         bicycles.BrakeSpeed();
         bicycles.AccelerateSpeed();
@@ -64,14 +124,34 @@ public class BicycleTest {
 
     @Test
     public void TandemshouldAccellerate() {
-        Bicycles bicycles = new Tandem();
+        Bicycles bicycles = new Tandem() {
+            @Override
+            public void accelerate() {
+
+            }
+
+            @Override
+            public void brake() {
+
+            }
+        };
         bicycles.AccelerateSpeed();
         assertEquals(12, bicycles.CurrentSpeed());
     }
 
     @Test
     public void TandemshouldBrake() {
-        Bicycles bicycles = new Tandem();
+        Bicycles bicycles = new Tandem() {
+            @Override
+            public void accelerate() {
+
+            }
+
+            @Override
+            public void brake() {
+
+            }
+        };
         bicycles.BrakeSpeed();
         bicycles.AccelerateSpeed();
         bicycles.BrakeSpeed();
@@ -81,7 +161,17 @@ public class BicycleTest {
     @Test
     public void TandemshouldBeAbleToStop() {
 
-        Bicycles bicycles = new Tandem();
+        Bicycles bicycles = new Tandem() {
+            @Override
+            public void accelerate() {
+
+            }
+
+            @Override
+            public void brake() {
+
+            }
+        };
         bicycles.AccelerateSpeed();
         bicycles.BrakeSpeed();
         bicycles.AccelerateSpeed();
@@ -93,7 +183,17 @@ public class BicycleTest {
     @org.testng.annotations.Test
     public void TandemshouldDoMultipleAccelerateAndBrakesCorrectly() {
 
-        Bicycles bicycles = new Tandem();
+        Bicycles bicycles = new Tandem() {
+            @Override
+            public void accelerate() {
+
+            }
+
+            @Override
+            public void brake() {
+
+            }
+        };
         bicycles.AccelerateSpeed();
         bicycles.BrakeSpeed();
         bicycles.AccelerateSpeed();

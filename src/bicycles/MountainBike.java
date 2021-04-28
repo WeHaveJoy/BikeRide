@@ -1,6 +1,6 @@
 package bicycles;
 
-public class MountainBike extends BicycleBase {
+public abstract class MountainBike extends BicycleBase {
     // int speed = 0;
     @Override
     public void AccelerateSpeed() {
