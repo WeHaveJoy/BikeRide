@@ -40,6 +40,7 @@ public class BicycleTest {
         bicycles.AccelerateSpeed();
         assertEquals(5, bicycles.CurrentSpeed());
     }
+
     @Test
     public void shouldShowCurrentSpeed() {
         Bicycles bicycles = new RoadBike() {
@@ -58,6 +59,7 @@ public class BicycleTest {
         bicycles.CurrentSpeed();
         assertEquals(-4, bicycles.CurrentSpeed());
     }
+
     @Test
     public void shouldDoMultipleAcceleratesCorrectly() {
 
@@ -77,6 +79,7 @@ public class BicycleTest {
         assertEquals(11, bicycles.CurrentSpeed());
 
     }
+
     @Test
     public void shouldDoMultipleAccelerateAndBrakesCorrectly() {
 
@@ -203,4 +206,21 @@ public class BicycleTest {
 
     }
 
+
+//    @Test
+//    public void shouldBeAbleToGetCountForType() {
+//
+//        FunRide bicycles = new FunRide() {
+//             @Override
+//            () {
+//
+//                return 2;
+//            }
+//        };
+//
+//        FunRide.getCountForType("Mountain Bike");
+//        FunRide.getCountForType("Mountain Bike");
+//        assertEquals( 2, FunRide.getCountForType("Mountain Bike"));
+//
+//    }
 }
