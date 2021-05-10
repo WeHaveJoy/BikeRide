@@ -9,6 +9,11 @@ public class BicycleTest {
     public void shouldAccellerate() {
         Bicycles bicycles = new RoadBike() {
             @Override
+            public void stopRide() {
+                
+            }
+
+            @Override
             public void accelerate() {
 
             }
@@ -25,6 +30,11 @@ public class BicycleTest {
     @Test
     public void shouldBrake() {
         Bicycles bicycles = new MountainBike() {
+            @Override
+            public void stopRide() {
+
+            }
+
             @Override
             public void accelerate() {
 
@@ -44,6 +54,11 @@ public class BicycleTest {
     @Test
     public void shouldShowCurrentSpeed() {
         Bicycles bicycles = new RoadBike() {
+            @Override
+            public void stopRide() {
+
+            }
+
             @Override
             public void accelerate() {
 
@@ -65,6 +80,11 @@ public class BicycleTest {
 
         Bicycles bicycles = new RoadBike() {
             @Override
+            public void stopRide() {
+
+            }
+
+            @Override
             public void accelerate() {
 
             }
@@ -84,6 +104,11 @@ public class BicycleTest {
     public void shouldDoMultipleAccelerateAndBrakesCorrectly() {
 
         Bicycles bicycles = new MountainBike() {
+            @Override
+            public void stopRide() {
+
+            }
+
             @Override
             public void accelerate() {
 
@@ -107,6 +132,11 @@ public class BicycleTest {
     public void shouldBeAbleToStop() {
 
         Bicycles bicycles = new RoadBike() {
+            @Override
+            public void stopRide() {
+
+            }
+
             @Override
             public void accelerate() {
 
@@ -207,24 +237,4 @@ public class BicycleTest {
     }
 
 
-    @Test
-    public void shouldBeAbleToGetCountForType() {
-
-        FunRide bicycles = new FunRide() {
-            //@Override
-              public static void accept() {
-
-        }
-
-        public static void getCountForType(){
-
-        }
-
-        };
-
-        bicycles.accept(1);
-        bicycles.getCountForType("Mountain Bike");
-        assertEquals( 1, bicycles.getCountForType("Mountain Bike"));
-
-    }
 }
