@@ -8,15 +8,6 @@ public abstract class BicycleBase implements  Bicycles{
        speed = x;
     }
 
-//    @Override
-//    public void AccelerateSpeed() {
-//
-//    }
-//
-//    @Override
-//    public void BrakeSpeed() {
-//
-//    }
 
     @Override
     public int CurrentSpeed() {
@@ -28,4 +19,8 @@ public abstract class BicycleBase implements  Bicycles{
         speed = 0;
 
     }
+
+    public abstract BicycleType getBicycleType();
+
+    public abstract void stopRide();
 }

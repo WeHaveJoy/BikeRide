@@ -19,12 +19,11 @@ public class BicycleSpecification {
     public int getBrake() {
         return brake;
     }
-    // add getters for brakeSpeed
 
         public BicycleType getBicycleType(){
             return bicycleType;
         }
-        // add getters for brakeSpeed
+
     }
 
 

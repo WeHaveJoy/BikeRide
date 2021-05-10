@@ -81,7 +81,7 @@ public class FunRide {
     }
 
 
-    static void getCountForType(String mountain_bike) {
+    static int getCountForType(String mountain_bike) {
 
         String BikeTyper = "";
 
@@ -114,7 +114,7 @@ public class FunRide {
         } else {
             System.out.println("There is only " + bikeCount + " registered " + BikeTyper + " for the run.");
         }
-//        return BikeType;
+        return BikeType;
     }
 
 
@@ -126,5 +126,10 @@ public class FunRide {
         }
     }
 
+   // static abstract void accept();
 
-}
+
+    //public static void accept() {
+
+    }
+//}

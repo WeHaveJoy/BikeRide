@@ -1,28 +1,26 @@
 package bicycles;
 
 public abstract class BicycleFromSpec extends  BicycleBase{
-    public BicycleSpecification bicycleSpecification;
+    private final bicycles.BicycleSpecification BicycleSpecification;
 
-    public BicycleFromSpec (Bicycles bicycles) {
-
+    public BicycleFromSpec (bicycles.BicycleSpecification bicycleSpecification) {
+        this.BicycleSpecification = bicycleSpecification;
     }
-//    @Override
+    @Override
     public void AccelerateSpeed() {
-       changeSpeed(this.bicycleSpecification.getAccelerationSpeed());
+       this.BicycleSpecification.getAccelerationSpeed();
 
     }
 
-
+    @Override
     public void BrakeSpeed() {
-   changeSpeed(this.bicycleSpecification.getBrake());
+   this.BicycleSpecification.getBrake();
     }
 
-    public int Current(){
-        return this.CurrentSpeed();
+    @Override
+    public BicycleType getBicycleType(){
+        this.BicycleSpecification.getBicycleType();
+        return null;
     }
 
-//    @Override
-    public void stopRide() {
-        this.stop();
-    }
 }

@@ -207,20 +207,24 @@ public class BicycleTest {
     }
 
 
-//    @Test
-//    public void shouldBeAbleToGetCountForType() {
-//
-//        FunRide bicycles = new FunRide() {
-//             @Override
-//            () {
-//
-//                return 2;
-//            }
-//        };
-//
-//        FunRide.getCountForType("Mountain Bike");
-//        FunRide.getCountForType("Mountain Bike");
-//        assertEquals( 2, FunRide.getCountForType("Mountain Bike"));
-//
-//    }
+    @Test
+    public void shouldBeAbleToGetCountForType() {
+
+        FunRide bicycles = new FunRide() {
+            //@Override
+              public static void accept() {
+
+        }
+
+        public static void getCountForType(){
+
+        }
+
+        };
+
+        bicycles.accept(1);
+        bicycles.getCountForType("Mountain Bike");
+        assertEquals( 1, bicycles.getCountForType("Mountain Bike"));
+
+    }
 }

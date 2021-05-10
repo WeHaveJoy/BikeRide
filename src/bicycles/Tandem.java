@@ -22,4 +22,9 @@ public abstract class Tandem implements Bicycles {
     public void stop() {
         speed = 0;
     }
+
+    @Override
+    public BicycleType getBicycleType(){
+        return BicycleType.Tandem;
+    };
 }
