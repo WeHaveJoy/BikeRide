@@ -20,6 +20,10 @@ public abstract class BicycleBase implements  Bicycles{
 
     }
 
+    public abstract void accelerate();
+
+    public abstract void brake();
+
     public abstract BicycleType getBicycleType();
 
     public abstract void stopRide();

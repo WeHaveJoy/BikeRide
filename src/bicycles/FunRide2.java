@@ -3,6 +3,7 @@ package bicycles;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class FunRide2 {
    int max;
    int allBikeCount = 0;
@@ -10,27 +11,26 @@ public class FunRide2 {
 
        FunRide2(int max){
           this.max=max;
-
        }
-       public void accept(BicycleType bicycles){
+
+       public void accept(Bicycles bicycles){
             if((!bicycleTypesList.contains(bicycles)) && (this.max > bicycleTypesList.size())){
-               allBikeCount++;
-              // bicycleTypesList.add(bicycles);
+               bicycleTypesList.add(bicycles);
+              //  allBikeCount++;
             }else{
                 System.out.println("We can't accept rides anymore.");
             }
 
        }
 
-       public BicycleType getCountForType(BicycleType bicycleType){
+       public int  getCountForType(BicycleType bicycleType){
 
            for (Bicycles bicycles:bicycleTypesList) {
                 if (bicycles.getBicycleType() == bicycleType){
                      allBikeCount++;
-
                 }
            }
-            return bicycleType;
+            return allBikeCount;
        }
 
     public int getEnteredCount(){

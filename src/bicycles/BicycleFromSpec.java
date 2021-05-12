@@ -6,13 +6,13 @@ public abstract class BicycleFromSpec extends  BicycleBase{
     public BicycleFromSpec (bicycles.BicycleSpecification bicycleSpecification) {
         this.BicycleSpecification = bicycleSpecification;
     }
-    @Override
+
     public void AccelerateSpeed() {
        this.BicycleSpecification.getAccelerationSpeed();
 
     }
 
-    @Override
+
     public void BrakeSpeed() {
    this.BicycleSpecification.getBrake();
     }

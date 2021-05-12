@@ -1,15 +1,15 @@
 package bicycles;
 
-public abstract class Tandem implements Bicycles {
+public class Tandem implements Bicycles {
 
         private int speed = 0;
     @Override
-    public void AccelerateSpeed() {
+    public void accelerate() {
           speed += 12;
     }
 
     @Override
-    public void BrakeSpeed() {
+    public void brake() {
         speed -= 7;
     }
 

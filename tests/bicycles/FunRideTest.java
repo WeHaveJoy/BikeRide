@@ -11,42 +11,63 @@ public class FunRideTest {
         FunRide2 funRide2 = new FunRide2(3) {
 
         };
-        funRide2.accept(BicycleType.Tandem);
-        funRide2.accept(BicycleType.MountainBike);
-        funRide2.accept(BicycleType.RoadBike);
+        Tandem tandem = new Tandem();
+
+        funRide2.accept(tandem);
+        funRide2.accept(tandem);
+        funRide2.accept(tandem);
+        assertEquals(1, funRide2.getCountForType(BicycleType.Tandem));
     }
 
 
     @Test
-    public void shouldBeAbleToAcceptOnly6Rides() {
+    public void shouldBeAbleToAcceptOnly6MountainBikeRides() {
 
-        FunRide2 funRide2 = new FunRide2(6) {
+        FunRide2 funRide2 = new FunRide2(6);
 
-        };
-        funRide2.accept(BicycleType.Tandem);
-        funRide2.accept(BicycleType.MountainBike);
-        funRide2.accept(BicycleType.MountainBike);
-        funRide2.accept(BicycleType.RoadBike);
-        funRide2.accept(BicycleType.MountainBike);
-        funRide2.accept(BicycleType.Tandem);
+        MountainBike mountainBike = new MountainBike();
+        MountainBike mountainBike2 = new MountainBike();
+        MountainBike mountainBike3 = new MountainBike();
+
+        funRide2.accept(mountainBike2);
+        funRide2.accept(mountainBike3);
+        funRide2.accept(mountainBike);
+        funRide2.accept(mountainBike);
+        funRide2.accept(mountainBike);
+        funRide2.accept(mountainBike);
+        assertEquals(3, funRide2.getCountForType(BicycleType.MountainBike));
     }
 
 
     @Test
-    public void shouldBeAbleToAcceptOnly10Rides() {
+    public void shouldBeAbleToAcceptOnly1RoadBikeRide() {
 
-        FunRide2 funRide2 = new FunRide2(10) {
+        FunRide2 funRide2 = new FunRide2(1) {
 
         };
-        funRide2.accept(BicycleType.Tandem);
-        funRide2.accept(BicycleType.MountainBike);
-        funRide2.accept(BicycleType.RoadBike);
-        funRide2.accept(BicycleType.Tandem);
-        funRide2.accept(BicycleType.MountainBike);
-        funRide2.accept(BicycleType.MountainBike);
-        funRide2.accept(BicycleType.RoadBike);
-        funRide2.accept(BicycleType.MountainBike);
-        funRide2.accept(BicycleType.Tandem);
-        funRide2.accept(BicycleType.RoadBike);
+        RoadBike roadBike = new RoadBike();
+        funRide2.accept(roadBike);
+        assertEquals(1, funRide2.getCountForType(BicycleType.RoadBike));
+    }
+
+
+    @Test
+    public void shouldBeAbleToAcceptOnly7RidesFromAnyBikeType() {
+
+        FunRide2 funRide2 = new FunRide2(7);
+        RoadBike roadBike = new RoadBike();
+        Tandem tandem = new Tandem();
+        Tandem tandem2 = new Tandem();
+
+        MountainBike mountainBike = new MountainBike();
+        funRide2.accept(roadBike);
+        funRide2.accept(tandem);
+        funRide2.accept(tandem2);
+        funRide2.accept(tandem2);
+        funRide2.accept(mountainBike);
+        funRide2.accept(roadBike);
+        funRide2.accept(mountainBike);
+        funRide2.accept(roadBike);
+        assertEquals(2, funRide2.getCountForType(BicycleType.Tandem));
     }
 }

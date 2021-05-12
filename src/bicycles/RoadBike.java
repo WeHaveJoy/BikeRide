@@ -1,18 +1,27 @@
 package bicycles;
 
-public abstract class RoadBike extends BicycleBase {
-    @Override
-    public void AccelerateSpeed() {
+
+public class RoadBike extends BicycleBase {
+
+    public void accelerate() {
         changeSpeed(11);
     }
 
-    @Override
-    public void BrakeSpeed() {
+
+    public void brake() {
         changeSpeed(-4);
     }
+
 
     @Override
     public BicycleType getBicycleType(){
         return BicycleType.RoadBike;
-    };
+    }
+
+    @Override
+    public void stopRide() {
+
+    }
+
+    ;
 }
