@@ -8,53 +8,53 @@ public class FunRideTest {
     @Test
     public void shouldBeAbleToAcceptOnly3Rides() {
 
-        FunRide2 funRide2 = new FunRide2(3) {
+        FunRide funRide = new FunRide(3) {
 
         };
         Tandem tandem = new Tandem();
 
-        funRide2.accept(tandem);
-        funRide2.accept(tandem);
-        funRide2.accept(tandem);
-        assertEquals(1, funRide2.getCountForType(BicycleType.Tandem));
+        funRide.accept(tandem);
+        funRide.accept(tandem);
+        funRide.accept(tandem);
+        assertEquals(1, funRide.getCountForType(BicycleType.Tandem));
     }
 
 
     @Test
     public void shouldBeAbleToAcceptOnly6MountainBikeRides() {
 
-        FunRide2 funRide2 = new FunRide2(6);
+        FunRide funRide = new FunRide(6);
 
         MountainBike mountainBike = new MountainBike();
         MountainBike mountainBike2 = new MountainBike();
         MountainBike mountainBike3 = new MountainBike();
 
-        funRide2.accept(mountainBike2);
-        funRide2.accept(mountainBike3);
-        funRide2.accept(mountainBike);
-        funRide2.accept(mountainBike);
-        funRide2.accept(mountainBike);
-        funRide2.accept(mountainBike);
-        assertEquals(3, funRide2.getCountForType(BicycleType.MountainBike));
+        funRide.accept(mountainBike2);
+        funRide.accept(mountainBike3);
+        funRide.accept(mountainBike);
+        funRide.accept(mountainBike);
+        funRide.accept(mountainBike);
+        funRide.accept(mountainBike);
+        assertEquals(3, funRide.getCountForType(BicycleType.MountainBike));
     }
 
 
     @Test
     public void shouldBeAbleToAcceptOnly1RoadBikeRide() {
 
-        FunRide2 funRide2 = new FunRide2(1) {
+        FunRide funRide = new FunRide(1) {
 
         };
         RoadBike roadBike = new RoadBike();
-        funRide2.accept(roadBike);
-        assertEquals(1, funRide2.getCountForType(BicycleType.RoadBike));
+        funRide.accept(roadBike);
+        assertEquals(1, funRide.getCountForType(BicycleType.RoadBike));
     }
 
 
     @Test
     public void shouldBeAbleToAcceptOnly7RidesFromAnyBikeType() {
 
-        FunRide2 funRide2 = new FunRide2(7);
+        FunRide funRide = new FunRide(7);
         RoadBike roadBike = new RoadBike();
         RoadBike roadBike2 = new RoadBike();
         RoadBike roadBike3 = new RoadBike();
@@ -65,16 +65,16 @@ public class FunRideTest {
         RoadBike roadBike4 = new RoadBike();
         RoadBike roadBike5 = new RoadBike();
 
-        funRide2.accept(roadBike);
-        funRide2.accept(tandem);
-        funRide2.accept(tandem2);
-        funRide2.accept(tandem3);
-        funRide2.accept(tandem4);
-        funRide2.accept(roadBike4);
-        funRide2.accept(roadBike2);
-        funRide2.accept(roadBike3);
-        funRide2.accept(roadBike5);
+        funRide.accept(roadBike);
+        funRide.accept(tandem);
+        funRide.accept(tandem2);
+        funRide.accept(tandem3);
+        funRide.accept(tandem4);
+        funRide.accept(roadBike4);
+        funRide.accept(roadBike2);
+        funRide.accept(roadBike3);
+        funRide.accept(roadBike5);
 
-        assertEquals(7, funRide2.getCountForType(BicycleType.Tandem), funRide2.getCountForType(BicycleType.RoadBike));
+        assertEquals(7, funRide.getCountForType(BicycleType.Tandem), funRide.getCountForType(BicycleType.RoadBike));
     }
 }
