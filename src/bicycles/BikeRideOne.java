@@ -1,9 +1,9 @@
 package bicycles;
 
 public class BikeRideOne {
-    private final Bicycles bicycles;
+    private final Bicycle bicycles;
 
-    public BikeRideOne(Bicycles bicycles){
+    public BikeRideOne(Bicycle bicycles){
         this.bicycles = bicycles;
     }
 

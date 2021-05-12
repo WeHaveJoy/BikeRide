@@ -7,15 +7,15 @@ import java.util.List;
 public class FunRide2 {
    int max;
    int allBikeCount = 0;
-    private List <Bicycles> bicycleTypesList = new ArrayList<Bicycles>() ;
+    private List <Bicycle> bicycleTypesList = new ArrayList<Bicycle>() ;
 
        FunRide2(int max){
           this.max=max;
        }
 
-       public void accept(Bicycles bicycles){
-            if((!bicycleTypesList.contains(bicycles)) && (this.max > bicycleTypesList.size())){
-               bicycleTypesList.add(bicycles);
+       public void accept(Bicycle bicycle){
+            if((!bicycleTypesList.contains(bicycle)) && (this.max > bicycleTypesList.size())){
+               bicycleTypesList.add(bicycle);
               //  allBikeCount++;
             }else{
                 System.out.println("We can't accept rides anymore.");
@@ -25,8 +25,8 @@ public class FunRide2 {
 
        public int  getCountForType(BicycleType bicycleType){
 
-           for (Bicycles bicycles:bicycleTypesList) {
-                if (bicycles.getBicycleType() == bicycleType){
+           for (Bicycle bicycle:bicycleTypesList) {
+                if (bicycle.getBicycleType() == bicycleType){
                      allBikeCount++;
                 }
            }

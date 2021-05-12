@@ -1,6 +1,6 @@
 package bicycles;
 
-public class Tandem implements Bicycles {
+public class Tandem implements Bicycle {
 
         private int speed = 0;
     @Override

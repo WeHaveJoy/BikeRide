@@ -1,6 +1,6 @@
 package bicycles;
 
 public interface BikeRide {
-    void ride(Bicycles bicycles);
+    void ride(Bicycle bicycles);
 
 }
